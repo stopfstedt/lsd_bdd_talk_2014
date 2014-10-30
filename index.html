@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=1024, user-scalable=no">
 
-  <title>Your deck.js Presentation</title>
+  <title>BDD @ UCSF 2014</title>
 
   <!-- Required stylesheet -->
   <link rel="stylesheet" media="screen" href="core/deck.core.css">
@@ -25,6 +25,15 @@
 
   <!-- Basic black and white print styles -->
   <link rel="stylesheet" media="print" href="core/print.css">
+  <style type="text/css">
+  #we-do-drupal-hosting img {
+    float:left;
+  }
+  #we-do-drupal-hosting h2,
+  #we-do-drupal-hosting ul {
+    float: right;
+  }
+  </style>
 
   <!-- Required Modernizr file -->
   <script src="modernizr.custom.js"></script>
@@ -35,19 +44,124 @@
     <!-- Begin slides. Just make elements with a class of slide. -->
 
     <section class="slide">
-      <h1>Slide</h1>
+      <h1>BDD @ UCSF 2014</h1>
     </section>
 
     <section class="slide">
-      <h1>Content</h1>
+      <h2>We do Drupal hosting</h2>
+      <img class="slide" src="images/sn_drupal_request_form.jpg" alt="Service Now Drupal request form" />
+      <ul>
+        <li class="slide">BYOD (or not)</li>
+        <li class="slide">Drupal 7 multisite (~410 sites)</li>
+        <li class="slide">Acquia Cloud</li>
+      </ul>
     </section>
 
     <section class="slide">
-      <h1>Here</h1>
+      <h2><img src="images/starterkit.jpg" alt="a vanilla starterkit site" /></h2>
     </section>
 
+    <section class="slide">
+      <h2>StarterKit</h2>
+      <ul>
+        <li class="slide">Default installation profile</li>
+        <li class="slide">47 contrib, 8 custom modules</li>
+        <li class="slide">1 custom base theme, 2 subthemes</li>
+        <li class="slide">Responsive</li>
+        <li class="slide">UCSF Branding/Identity</li>
+        <li class="slide">Webedit</li>
+        <li class="slide">Media module integration</li>
+        <li class="slide">~350 implementations</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Why we test</h2>
+      <img class="slide" src="images/pending_updates.jpg" alt="pending module updates" />
+      <img class="slide" src="images/gh_bugreport.jpg" alt="bug report" />
+    </section>
     <!-- End slides. -->
 
+    <section class="slide">
+      <h1>What we did</h1>
+    </section>
+
+    <section class="slide">
+      <h2>Step 0: Preparations</h2>
+      <ul>
+        <li class="slide">Separate repos for custom themes/modules/profile</li>
+        <li class="slide">GitHub</li>
+        <li class="slide">Push-button build (<code>drush make</code>)</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+    <h2>Step 1: Behat Tests</h2>
+    <div class="slide">
+      <h3>What to test</h3>
+      <ul>
+        <li>Common page elements</li>
+        <li>Roles/Permissions</li>
+        <li>Custom content types</li>
+        <li>Taxonomy, Menus, etc</li>
+      </ul>
+    </div>
+    <div class="slide">
+      <h3>How to test</h3>
+      <ul>
+        <li class="slide">Behat + Drupal Behat Extension</li>
+        <li class="slide">Drupal API driver</li>
+        <li class="slide">Selenium webdriver + Firefox</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Step 2: Continuous Integration</h2>
+      <img class="slide" src="images/travis_ci.jpg" alt="Travis/CI" />
+      <ul>
+        <li class="slide">Travis CI</li>
+        <li class="slide">Build and test automation on each commit</li>
+        <li class="slide">Free service for Open Source projects</li>
+        <li class="slide"><a href="https://travis-ci.org/ucsf-drupal/ucsf_installprofile/jobs/39336071">Example</a></li>
+      </ul>
+      </section>
+
+      <section class="slide">
+        <h2>Step 3: Multi-browser testing</h2>
+        <img class="slide" src="images/sauce.jpg" alt="saucelabs" />
+        <ul>
+          <li class="slide">SauceLabs</li>
+          <li class="slide">IE7-11, Chrome, Safari, Firefox</li>
+          <li class="slide">Run all tests on all browsers</li>
+          <li class="slide"><em>Free service for Open Source projects</em></li>
+          <li class="slide"><a href="https://saucelabs.com/u/ucsfdrupal">Example</a></li>
+        </ul>
+      </section>
+
+      <section class="slide">
+        <h2>Challenges</h2>
+        <ul>
+          <li class="slide">"But, what do we test?"</li>
+          <li class="slide">Build failures</li>
+          <li class="slide">Community buy-in/adoption</li>
+        </ul>
+      </section>
+
+      <section class="slide">
+        <h2>Contact us</h2>
+        <ul>
+          <li>stefan.topfstedt@ucsf.edu</li>
+          <li>webservices@ucsf.edu</li>
+        </ul>
+      </section>
+
+      <section class="slide">
+        <h1>Questions?</h1>
+      </section>
+
+      <section class="slide">
+        <h1>Thanks!</h1>
+      </section>
     <!-- Begin extension snippets. Add or remove as needed. -->
 
     <!-- deck.navigation snippet -->
